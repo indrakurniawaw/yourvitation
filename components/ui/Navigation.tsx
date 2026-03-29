@@ -16,7 +16,7 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm">
+    <nav className="sticky top-0 z-50 bg-pink-100">
       <div className="container-custom">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -30,7 +30,7 @@ export default function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-text hover:text-primary transition-colors font-medium"
+                className="text-sm hover:text-primary transition-colors font-light "
               >
                 {link.label}
               </Link>
@@ -41,7 +41,7 @@ export default function Navigation() {
               )}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-primary"
+              className="btn btn-primary btn-sm px-3"
             >
               Hubungi Kami
             </a>

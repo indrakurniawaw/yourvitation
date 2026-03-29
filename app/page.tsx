@@ -18,6 +18,7 @@ import {
   TESTIMONIALS,
   getWhatsAppLink,
 } from "@/lib/constants";
+import PhoneCarousel from "@/components/Carousel";
 
 export default function HomePage() {
   const [openFAQ, setOpenFAQ] = useState<string | null>(null);
@@ -31,16 +32,16 @@ export default function HomePage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-purple-50 via-pink-50 to-amber-50 py-20 md:py-32">
-        <div className="container-custom">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+      <section className="relative bg-pink-100 py-20 md:py-32">
+        <div className="container-custom-hero">
+          <div className="grid md:grid-cols-2 gap-0 items-center">
             <div className="space-y-6">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-4xl font-medium leading-tight font-playfair text-center text-start">
                 Buat Undangan Digital{" "}
                 <span className="text-gradient">Elegan</span> dalam Hitungan
                 Menit
               </h1>
-              <p className="text-lg text-text-light md:text-xl">
+              <p className="text-2xl text-text-light md:text-xl font-sans ">
                 Undangan digital modern untuk momen spesial Anda. Praktis,
                 hemat, dan ramah lingkungan.
               </p>
@@ -51,12 +52,12 @@ export default function HomePage() {
                   )}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-primary text-lg"
+                  className="btn btn-primary text-medium"
                 >
                   Mulai Sekarang
                   <ArrowRight className="ml-2" size={20} />
                 </a>
-                <Link href="/themes" className="btn btn-secondary text-lg">
+                <Link href="/themes" className="btn btn-outline text-medium py-2 px-4">
                   Lihat Contoh
                 </Link>
               </div>
@@ -72,7 +73,8 @@ export default function HomePage() {
               </div>
             </div>
             <div className="relative">
-              <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
+              <PhoneCarousel />
+              {/* <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
                 <img
                   src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=800&fit=crop"
                   alt="Undangan Digital"
@@ -87,7 +89,7 @@ export default function HomePage() {
                     <p className="text-sm text-text-light">Respon Cepat</p>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -100,7 +102,7 @@ export default function HomePage() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Fitur <span className="text-gradient">Unggulan</span>
             </h2>
-            <p className="text-text-light text-lg max-w-2xl mx-auto">
+            <p className="text-text-light text-lg max-w-2xl mx-auto font-playfair">
               Dilengkapi dengan berbagai fitur modern untuk mempermudah Anda
               dalam membuat undangan digital
             </p>
@@ -162,7 +164,7 @@ export default function HomePage() {
                 <h3 className="font-semibold text-lg mb-1">{template.name}</h3>
                 <div className="flex items-center justify-between">
                   <span className="text-primary font-bold">
-                    Rp {template.price.toLocaleString()}
+                    {/* Rp {template.price.toLocaleString("id-ID")} */}
                   </span>
                   <Link
                     href="/themes"
@@ -251,7 +253,7 @@ export default function HomePage() {
                     {plan.name}
                   </h3>
                   <div className="text-4xl font-bold text-gradient mb-2">
-                    Rp {plan.price.toLocaleString()}
+                    {/* Rp {plan.price.toLocaleString()} */}
                   </div>
                   <p className="text-text-light">/{plan.duration}</p>
                 </div>
